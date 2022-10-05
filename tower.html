@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Torre de Hanói</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <table boder="1" width="900" align="center">
+        <tr>
+            <td align="right">
+                <a href="index.html">Capa </a>|
+                <a href="convert_abnt.html">Converter nome para ABNT </a>|
+                <a href="tower.html">Torre de Hanói</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <img src="logounifor.jpg">
+                <h2>Torre de Hanói</h2>
+
+                <script>
+                    function torreDeHanoi(n, doPino, paraPino, auxilPino) {
+                        if (n == 0) {
+                            return;
+                        }
+                        torreDeHanoi(n - 1, doPino, auxilPino, paraPino);
+                        document.write("Mover o disco " + n + " do pino " + doPino +
+                            " para o pino " + paraPino + "<br/>");
+                        torreDeHanoi(n - 1, auxilPino, paraPino, doPino);
+                    }
+
+                    var numeroDeDiscos = 5;
+                    torreDeHanoi(numeroDeDiscos, 'A', 'C', 'B');
+                </script>
+            </td>
+        </tr>
+</body>

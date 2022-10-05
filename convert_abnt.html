@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Converter nome para ABNT</title>
+</head>
+
+<body>
+    <table boder="1" width="900" align="center">
+        <tr>
+            <td align="right">
+                <a href="index.html">Capa </a>|
+                <a href="convert_abnt.html">Converter nome para ABNT </a>|
+                <a href="tower.html">Torre de Hanói</a>
+            </td>
+        </tr>
+
+        <script>
+            //const readline = require("readline-sync");
+            function convert(){
+            let first_name = document.getElementById("fname").value;
+            let surname1 = document.getElementById("surname1").value;
+            let surname2 = document.getElementById("surname2").value;
+            let surname3 = document.getElementById("surname3").value;
+            let surname1_first_letter = surname1.toString().charAt(0);
+            let surname2_first_letter = surname2.toString().charAt(0);
+            let result = (surname3 + ', ' + first_name + ' ' + surname1_first_letter + ' ' + surname2_first_letter)
+            //alert(result)
+            //document.write(result)
+            document.getElementById('spanResult').textContent = result;
+        }
+            </script>
+
+        <tr>
+            <td colspan="2" align="center">
+                <img src="logounifor.jpg">
+                <h2>Converter nome para ABNT </h2><br>
+                <form>
+                    <h3>Digite o seu nome</h3><br>
+                    <input type="text" id="fname" name="fname">
+                    <input type="text" id="surname1" name="surname1">
+                    <input type="text" id="surname2" name="surname2">
+                    <input type="text" id="surname3" name="surname3">
+                </form>
+                <br><button onclick ="convert()">Converter</button><br>
+                <h3 span id="spanResult">
+
+                </span></h3>
+                <br>
